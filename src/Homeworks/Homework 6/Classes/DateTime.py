@@ -413,7 +413,7 @@ class DateTime:
 
 esim1 = DateTime(Date(2020, 2, 28), Time(23, 59, 0))
 # print(esim1)
-esim2 = DateTime(Date(2020, 2, 28), Time(23, 59, 0))
+esim2 = DateTime(Date(2017, 1, 19), Time(18, 20, 0))
 # esim1.add_second(60)
 # esim1.sub_day(20)
 # esim1.sub_month(2)
