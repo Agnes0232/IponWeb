@@ -6,7 +6,7 @@ class Money:
     exchange = {"AMD": 1, "RUB": 5.8, "USD": 400, "EUR": 430}
 
     def __init__(self, amount: int, currency: str):
-        if isinstance(amount, (int, float)) and amount >= 0 and isinstance(currency, str):
+        if isinstance(amount, (int, float)) and amount >= 0 and currency in Money.exchange.keys():
             self.__amount = amount
             self.__currency = currency
         else:
@@ -40,7 +40,7 @@ class Money:
     def conversation(self, new_curr: str):
         curr = self.currency
         self.currency = new_curr
-        self.amount = (self.amount / Money.exchange[curr]) * Money.exchange[self.currency]
+        self.amount = (self.amount / Money.exchange[self.currency]) * Money.exchange[curr]
         return self
 
     def __add__(self, other):
